@@ -129,4 +129,30 @@ body {
   .grid {
     grid-template-columns: 1fr;
   }
+  /* === CV ICON BUTTON STYLE === */
+.links a[title="Download CV"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+/* Hover animation like a button */
+.links a[title="Download CV"]:hover {
+  background: #000;
+  color: #fff;
+  transform: scale(1.1);
+  border: 1px solid #000;
+}
+
+/* Dark mode hover */
+.dark .links a[title="Download CV"]:hover {
+  background: #fff;
+  color: #000;
+  border: 1px solid #fff;
+}
+
 }
