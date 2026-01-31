@@ -10,54 +10,59 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: #000;
   color: #fff;
-  width: 100%;
   overflow-x: hidden;
 }
 
-/* FULL SCREEN PORTFOLIO */
-.portfolio {
-  display: flex;
+/* HERO SECTION */
+.hero {
+  position: relative;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* LEFT PROFILE SECTION */
-.profile-card {
-  flex: 0 0 30%;
-  background: #111;
-  padding: 40px;
-  border-right: 1px solid #333;
-}
-
-.profile-card img {
+/* IMAGE */
+.hero-img {
   width: 100%;
-  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) brightness(60%);
+}
+
+/* TEXT OVERLAY */
+.hero-content {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-content h1 span {
+  font-weight: bold;
+}
+
+.hero-content h3 {
+  font-size: 18px;
+  color: #ccc;
   margin-bottom: 20px;
-  filter: grayscale(100%);
 }
 
-.profile-card h1 {
-  font-size: 28px;
-  margin-bottom: 5px;
-}
-
-.role {
-  font-size: 14px;
-  color: #bbb;
-  margin-bottom: 15px;
-}
-
-.about {
-  color: #ddd;
+.hero-content p {
   line-height: 1.6;
+  color: #ddd;
   margin-bottom: 20px;
 }
 
-/* LINKS + CV */
+/* LINKS */
 .links {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 18px;
 }
 
 .links a {
@@ -71,12 +76,11 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 14px;
+  padding: 8px 16px;
   border: 1px solid #fff;
   border-radius: 20px;
   font-size: 14px;
   font-weight: bold;
-  letter-spacing: 1px;
   transition: all 0.3s ease;
   animation: pulse 2.5s infinite;
 }
@@ -85,67 +89,24 @@ body {
   background: #fff;
   color: #000;
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(255,255,255,0.2);
 }
 
-/* PULSE ANIMATION */
+/* PULSE */
 @keyframes pulse {
   0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.4); }
   70% { box-shadow: 0 0 0 10px rgba(255,255,255,0); }
   100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
 }
 
-/* RIGHT CONTENT SECTION */
-.grid {
-  flex: 1;
-  background: #000;
-  padding: 40px;
-
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-/* CARDS */
-.card {
-  background: #111;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #333;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-
-.card h2 {
-  font-size: 16px;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-}
-
-.card p {
-  color: #ddd;
-  line-height: 1.5;
-}
-
-.card a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-/* MOBILE VIEW */
-@media (max-width: 900px) {
-  .portfolio {
-    flex-direction: column;
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-content {
+    left: 20px;
+    bottom: 40px;
+    max-width: 90%;
   }
 
-  .profile-card,
-  .grid {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
+  .hero-content h1 {
+    font-size: 32px;
   }
 }
