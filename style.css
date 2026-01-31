@@ -5,6 +5,8 @@ body {
   background: #f4f4f4;      /* light mode */
   color: #111;
   transition: background 0.3s, color 0.3s;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 /* DARK MODE */
@@ -31,33 +33,35 @@ body {
   color: #000;
 }
 
-/* ========== LAYOUT ========== */
+/* ========== MAIN LAYOUT (KEY FIX) ========== */
 .portfolio {
   display: flex;
-  width: 100%;
-  margin: 40px 0;
-  padding: 0 40px;
+  width: 100vw;        /* FULL SCREEN */
+  margin: 0;
+  padding: 40px;
   gap: 30px;
   box-sizing: border-box;
+  align-items: stretch;
 }
 
-/* ========== PROFILE CARD (LEFT) ========== */
+/* ========== LEFT PROFILE (FIXED) ========== */
 .profile-card {
-  flex: 0 0 32%;
+  flex: 0 0 30%;       /* fixed left width */
   padding: 30px;
   border-radius: 10px;
   border: 1px solid #ddd;
-  background: #ffffff;   /* light mode */
+  background: #ffffff;
   color: #111;
+  box-sizing: border-box;
 }
 
 .dark .profile-card {
-  background: #111;       /* dark mode */
+  background: #111;
   color: #f4f4f4;
   border-color: #333;
 }
 
-/* PROFILE IMAGE (BLACK & WHITE) */
+/* PROFILE IMAGE */
 .profile-card img {
   width: 100%;
   border-radius: 10px;
@@ -70,27 +74,27 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 14px;
-  color: #555;  /* light mode */
+  color: #555;
 }
 
 .dark .role {
-  color: #aaa;  /* dark mode */
+  color: #aaa;
 }
 
 .about {
-  color: #333;  /* light mode */
+  color: #333;
   line-height: 1.6;
 }
 
 .dark .about {
-  color: #ddd;  /* dark mode */
+  color: #ddd;
 }
 
 /* ICONS */
 .links a {
   margin-right: 15px;
   font-size: 20px;
-  color: #111;   /* light mode */
+  color: #111;
   transition: opacity 0.2s;
 }
 
@@ -99,20 +103,22 @@ body {
 }
 
 .dark .links a {
-  color: #f4f4f4; /* dark mode */
+  color: #f4f4f4;
 }
 
-/* ========== GRID (RIGHT SIDE) ========== */
+/* ========== RIGHT GRID (FULL WIDTH FILL) ========== */
 .grid {
-  flex: 1;
+  flex: 1;             /* THIS IS THE CRITICAL LINE */
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  box-sizing: border-box;
 }
 
 /* CARDS */
 .card {
-  background: #fff;        /* light mode */
+  background: #fff;
   padding: 20px;
   border-radius: 10px;
   border: 1px solid #ddd;
@@ -125,7 +131,7 @@ body {
 }
 
 .dark .card {
-  background: #1a1a1a;     /* dark mode */
+  background: #1a1a1a;
   border-color: #333;
 }
 
@@ -143,14 +149,14 @@ body {
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1100px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr); /* tablet */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 900px) {
   .portfolio {
     flex-direction: column;
-    margin: 20px;
+    padding: 20px;
   }
 
   .profile-card,
@@ -159,6 +165,6 @@ body {
   }
 
   .grid {
-    grid-template-columns: 1fr; /* mobile */
+    grid-template-columns: 1fr;
   }
 }
