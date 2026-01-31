@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f4f4f4;      /* light mode */
+  background: #f4f4f4;
   color: #111;
   transition: background 0.3s, color 0.3s;
   width: 100vw;
@@ -15,7 +15,7 @@ body {
   color: #f4f4f4;
 }
 
-/* THEME TOGGLE BUTTON */
+/* THEME TOGGLE */
 .theme-toggle {
   position: fixed;
   top: 20px;
@@ -33,31 +33,29 @@ body {
   color: #000;
 }
 
-/* ========== MAIN LAYOUT (KEY FIX) ========== */
+/* ========== MAIN LAYOUT (CRITICAL FIX) ========== */
 .portfolio {
   display: flex;
   width: 100vw;        /* FULL SCREEN */
-  margin: 0;
+  min-height: 100vh;
   padding: 40px;
   gap: 30px;
   box-sizing: border-box;
   align-items: stretch;
 }
 
-/* ========== LEFT PROFILE (FIXED) ========== */
+/* ========== LEFT PROFILE ========== */
 .profile-card {
-  flex: 0 0 30%;       /* fixed left width */
+  flex: 0 0 30%;      /* fixed width */
+  background: #ffffff;
   padding: 30px;
   border-radius: 10px;
   border: 1px solid #ddd;
-  background: #ffffff;
-  color: #111;
   box-sizing: border-box;
 }
 
 .dark .profile-card {
   background: #111;
-  color: #f4f4f4;
   border-color: #333;
 }
 
@@ -66,10 +64,10 @@ body {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 20px;
-  filter: grayscale(100%) contrast(1.05);
+  filter: grayscale(100%);
 }
 
-/* PROFILE TEXT */
+/* TEXT */
 .role {
   font-weight: bold;
   text-transform: uppercase;
@@ -94,7 +92,7 @@ body {
 .links a {
   margin-right: 15px;
   font-size: 20px;
-  color: #111;
+  color: inherit;
   transition: opacity 0.2s;
 }
 
@@ -102,18 +100,13 @@ body {
   opacity: 0.6;
 }
 
-.dark .links a {
-  color: #f4f4f4;
-}
-
-/* ========== RIGHT GRID (FULL WIDTH FILL) ========== */
+/* ========== RIGHT SIDE GRID (TRUE FULL WIDTH) ========== */
 .grid {
-  flex: 1;             /* THIS IS THE CRITICAL LINE */
-  width: 100%;
+  flex: 1;                 /* VERY IMPORTANT */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  box-sizing: border-box;
+  align-content: start;
 }
 
 /* CARDS */
