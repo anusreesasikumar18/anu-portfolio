@@ -75,8 +75,49 @@ body {
   text-decoration: none;
 }
 
-.links a:hover {
-  opacity: 0.7;
+.links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.links a {
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* CV BUTTON */
+.cv-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* Hover animation */
+.cv-btn:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255,255,255,0.2);
+}
+
+/* Subtle pulse animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(255,255,255,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+}
+
+.cv-btn {
+  animation: pulse 2.5s infinite;
 }
 
 /* RIGHT GRID */
