@@ -64,11 +64,13 @@ body {
 
 /* RIGHT GRID - THIS FIXES BLANK SPACE */
 .grid {
-  flex: 1;               /* THIS IS KEY */
+  flex: 1;                     /* IMPORTANT */
+  width: 100%;                 /* IMPORTANT */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+
 
 /* CARDS */
 .card {
