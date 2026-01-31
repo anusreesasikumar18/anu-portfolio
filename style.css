@@ -1,18 +1,15 @@
-/* ========== GLOBAL ========== */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f4f4f4;
-  color: #111;
+  background: #ffffff;
+  color: #000000;
   transition: background 0.3s, color 0.3s;
-  width: 100vw;
-  overflow-x: hidden;
 }
 
 /* DARK MODE */
 .dark {
-  background: #111;
-  color: #f4f4f4;
+  background: #000000;
+  color: #ffffff;
 }
 
 /* THEME TOGGLE */
@@ -33,33 +30,31 @@ body {
   color: #000;
 }
 
-/* ========== MAIN LAYOUT (CRITICAL FIX) ========== */
+/* MAIN LAYOUT - FULL SCREEN FIX */
 .portfolio {
   display: flex;
-  width: 100vw;        /* FULL SCREEN */
+  width: 100vw;      /* FULL SCREEN */
   min-height: 100vh;
   padding: 40px;
   gap: 30px;
   box-sizing: border-box;
-  align-items: stretch;
 }
 
-/* ========== LEFT PROFILE ========== */
+/* LEFT PROFILE */
 .profile-card {
-  flex: 0 0 30%;      /* fixed width */
+  flex: 0 0 30%;   /* fixed left width */
   background: #ffffff;
   padding: 30px;
   border-radius: 10px;
   border: 1px solid #ddd;
-  box-sizing: border-box;
 }
 
 .dark .profile-card {
-  background: #111;
+  background: #000000;
   border-color: #333;
 }
 
-/* PROFILE IMAGE */
+/* PROFILE IMAGE BLACK & WHITE */
 .profile-card img {
   width: 100%;
   border-radius: 10px;
@@ -67,79 +62,34 @@ body {
   filter: grayscale(100%);
 }
 
-/* TEXT */
-.role {
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 14px;
-  color: #555;
-}
-
-.dark .role {
-  color: #aaa;
-}
-
-.about {
-  color: #333;
-  line-height: 1.6;
-}
-
-.dark .about {
-  color: #ddd;
-}
-
-/* ICONS */
-.links a {
-  margin-right: 15px;
-  font-size: 20px;
-  color: inherit;
-  transition: opacity 0.2s;
-}
-
-.links a:hover {
-  opacity: 0.6;
-}
-
-/* ========== RIGHT SIDE GRID (TRUE FULL WIDTH) ========== */
+/* RIGHT GRID - THIS FIXES BLANK SPACE */
 .grid {
-  flex: 1;                 /* VERY IMPORTANT */
+  flex: 1;               /* THIS IS KEY */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  align-content: start;
 }
 
 /* CARDS */
 .card {
-  background: #fff;
+  background: #ffffff;
   padding: 20px;
   border-radius: 10px;
   border: 1px solid #ddd;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
 .dark .card {
-  background: #1a1a1a;
+  background: #000000;
   border-color: #333;
 }
 
-.card h2 {
-  margin-top: 0;
-  font-size: 16px;
-  text-transform: uppercase;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-.card a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-/* ========== RESPONSIVE ========== */
+/* RESPONSIVE */
 @media (max-width: 1100px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
