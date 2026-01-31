@@ -187,6 +187,13 @@ body {
 .fill {
   height: 8px;
   background: #fff;
+  @media (min-width: 1400px) {
+  .portfolio {
+    margin-left: auto;
+    margin-right: auto;
+  
+
+
 }
 
 }
