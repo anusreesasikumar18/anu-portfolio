@@ -2,106 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Anusree S | Linux Portfolio</title>
+  <title>Anusree S | Linux System Administrator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <!-- PROFILE IMAGE -->
+    <img src="profile.jpg" alt="Anusree S" class="hero-img">
 
-<div class="portfolio">
+    <!-- TEXT OVER IMAGE -->
+    <div class="hero-content">
+      <h1>
+        Hello, I'm<br>
+        <span>Anusree S</span>
+      </h1>
 
-  <!-- LEFT PROFILE -->
-  <div class="profile-card">
-    <img src="profile.jpg" alt="Anusree">
+      <h3>Linux System Administrator</h3>
 
-    <h1>Hello, I'm<br><span>Anusree S</span></h1>
-    <p class="role">Linux System Administrator</p>
-
-    <p class="about">
-      Entry-level Linux System Administrator with hands-on experience in
-      Linux server management, Bash automation, AWS cloud basics,
-      and networking fundamentals (CCNA).
-    </p>
-    
-<div class="links">
-  <a href="mailto:anusreesasikumar18@gmail.com">
-    <i class="fa-solid fa-envelope"></i>
-  </a>
-
-  <a href="https://github.com/anusreesasikumar18" target="_blank">
-    <i class="fa-brands fa-github"></i>
-  </a>
-
-  <a href="https://www.linkedin.com/in/anusree-s-6a894a360" target="_blank">
-    <i class="fa-brands fa-linkedin"></i>
-  </a>
-
-  <!-- CV BUTTON (RIGHT AFTER LINKEDIN) -->
-  <a href="Anusree_S_CV.pdf" download class="cv-btn">
-    <i class="fa-solid fa-file-pdf"></i> CV
-  </a>
-</div>
-
-
-    
-
-  <!-- RIGHT GRID -->
-  <div class="grid">
-    
-   
-    <div class="card">
-      <h2><i class="fa-brands fa-linux"></i> Linux</h2>
-      <p>User & Group Management, ACL, LVM, Mounting, Systemd, Crontab,
-         Yum/DNF/Apt, journalctl</p>
-    </div>
-
-    <div class="card">
-      <h2><i class="fa-brands fa-aws"></i> Cloud</h2>
-      <p>EC2, IAM (basic), S3, VPC (basic), Security Groups,
-         Elastic IP, CloudWatch</p>
-    </div>
-
-    <div class="card">
-      <h2><i class="fa-solid fa-network-wired"></i> Networking</h2>
-      <p>TCP/IP, OSI, Subnetting, VLAN, Inter-VLAN,
-         DHCP, DNS, NAT, Routing</p>
-    </div>
-
-    <div class="card">
-      <h2><i class="fa-solid fa-briefcase"></i> Internship</h2>
-      <p>Linux System Administrator Intern<br>
-         Synnefo Solutions (May 2025 – Jan 2026)</p>
-    </div>
-
-    <div class="card">
-      <h2><i class="fa-solid fa-code"></i> Projects</h2>
       <p>
-        <a href="https://github.com/anusreesasikumar18/LINUX-AUTOMATION-TOOLSCRIPT" target="_blank">
-          Linux Automation Toolkit
-        </a><br>
-        <a href="https://github.com/anusreesasikumar18/Nginx-Project" target="_blank">
-          AWS HA Web Application
-        </a>
+        Entry-level Linux System Administrator with hands-on experience in
+        Linux server management, Bash automation, AWS cloud basics, and
+        networking fundamentals (CCNA).
       </p>
+
+      <!-- LINKS + CV -->
+      <div class="links">
+        <a href="mailto:anusreesasikumar18@gmail.com" title="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+
+        <a href="https://github.com/anusreesasikumar18" target="_blank" title="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/anusree-s-6a894a360" target="_blank" title="LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+        <!-- CV BUTTON -->
+        <a href="Anusree_S_CV.pdf" download class="cv-btn" title="Download CV">
+          <i class="fa-solid fa-file-pdf"></i> CV
+        </a>
+      </div>
     </div>
-
-    <div class="card">
-      <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
-      <p>B.Sc Computer Science<br>
-         Advanced Diploma in Network Engineering</p>
-    </div>
-
-  </div>
-
-</div>
-
-<script>
-function toggleTheme() {
-  document.body.classList.toggle("dark");
-}
-</script>
+  </section>
 
 </body>
 </html>
