@@ -5,6 +5,11 @@ body {
   color: #000000;
   transition: background 0.3s, color 0.3s;
 }
+.portfolio {
+  width: 100%;
+  max-width: 100%;
+}
+
 
 /* DARK MODE */
 .dark {
@@ -33,12 +38,14 @@ body {
 /* MAIN LAYOUT - FULL SCREEN FIX */
 .portfolio {
   display: flex;
-  width: 100vw;      /* FULL SCREEN */
-  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;      /* removes centering restriction */
+  margin: 0;
   padding: 40px;
   gap: 30px;
   box-sizing: border-box;
 }
+
 
 /* LEFT PROFILE */
 .profile-card {
@@ -64,8 +71,8 @@ body {
 
 /* RIGHT GRID - THIS FIXES BLANK SPACE */
 .grid {
-  flex: 1;                     /* IMPORTANT */
-  width: 100%;                 /* IMPORTANT */
+  flex: 1;              /* VERY IMPORTANT */
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -161,6 +168,29 @@ body {
 .dark .cv-btn:hover {
   background: #fff;
   color: #000;
+}
+  
+/* ===== ICON COLOR CONTROL ===== */
+.links a {
+  margin-right: 15px;
+  font-size: 20px;
+  color: #000;        /* black icons in light mode */
+}
+
+/* dark mode icons */
+.dark .links a {
+  color: #ffffff;     /* white icons in dark mode */
+}
+
+/* keep your CV button matching the icons */
+.cv-btn {
+  color: #000;
+  border: 1px solid #000;
+}
+
+.dark .cv-btn {
+  color: #ffffff;
+  border: 1px solid #ffffff;
 }
 
 }
