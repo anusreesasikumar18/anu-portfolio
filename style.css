@@ -45,14 +45,19 @@ body {
   border-radius: 10px;
   border: 1px solid #ddd;
 }
+.dark .profile-card {
+  background: #1a1a1a;
+  border-color: #333;
+}
 
-/* RIGHT GRID — fills remaining space */
+/* RIGHT GRID — 3 cards on large screens */
 .grid {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+
 
 .card {
   background: #fff;
