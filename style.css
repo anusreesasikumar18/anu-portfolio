@@ -12,10 +12,14 @@ body {
 
 .portfolio {
   display: flex;
-  max-width: 1200px;
-  margin: 40px auto;
+  width: 100vw;        /* full screen width */
+  min-height: 100vh;   /* full screen height */
+  margin: 0;           /* no centering */
+  padding: 40px;       /* inner spacing */
   gap: 30px;
+  box-sizing: border-box;
 }
+
 
 /* LEFT PROFILE */
 .profile-card {
