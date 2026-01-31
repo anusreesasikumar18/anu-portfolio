@@ -23,12 +23,13 @@ body {
 
 /* LEFT PROFILE */
 .profile-card {
-  width: 35%;
-  background: #111;
-  padding: 30px;
-  border-radius: 10px;
-  border: 1px solid #333;
+  flex: 0 0 30%;
 }
+
+.grid {
+  flex: 1;
+}
+
 
 .profile-card img {
   width: 100%;
