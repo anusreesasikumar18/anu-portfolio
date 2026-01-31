@@ -1,16 +1,19 @@
+/* ========== GLOBAL ========== */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f4f4f4;
+  background: #f4f4f4;      /* light mode */
   color: #111;
   transition: background 0.3s, color 0.3s;
 }
 
+/* DARK MODE */
 .dark {
   background: #111;
   color: #f4f4f4;
 }
 
+/* THEME TOGGLE BUTTON */
 .theme-toggle {
   position: fixed;
   top: 20px;
@@ -28,6 +31,7 @@ body {
   color: #000;
 }
 
+/* ========== LAYOUT ========== */
 .portfolio {
   display: flex;
   width: 100%;
@@ -37,30 +41,78 @@ body {
   box-sizing: border-box;
 }
 
-/* LEFT PROFILE — keep fixed */
+/* ========== PROFILE CARD (LEFT) ========== */
 .profile-card {
   flex: 0 0 32%;
-  background: #fff;
   padding: 30px;
   border-radius: 10px;
   border: 1px solid #ddd;
+  background: #ffffff;   /* light mode */
+  color: #111;
 }
+
 .dark .profile-card {
-  background: #1a1a1a;
+  background: #111;       /* dark mode */
+  color: #f4f4f4;
   border-color: #333;
 }
 
-/* RIGHT GRID — 3 cards on large screens */
+/* PROFILE IMAGE (BLACK & WHITE) */
+.profile-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  filter: grayscale(100%) contrast(1.05);
+}
+
+/* PROFILE TEXT */
+.role {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #555;  /* light mode */
+}
+
+.dark .role {
+  color: #aaa;  /* dark mode */
+}
+
+.about {
+  color: #333;  /* light mode */
+  line-height: 1.6;
+}
+
+.dark .about {
+  color: #ddd;  /* dark mode */
+}
+
+/* ICONS */
+.links a {
+  margin-right: 15px;
+  font-size: 20px;
+  color: #111;   /* light mode */
+  transition: opacity 0.2s;
+}
+
+.links a:hover {
+  opacity: 0.6;
+}
+
+.dark .links a {
+  color: #f4f4f4; /* dark mode */
+}
+
+/* ========== GRID (RIGHT SIDE) ========== */
 .grid {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
   gap: 20px;
 }
 
-
+/* CARDS */
 .card {
-  background: #fff;
+  background: #fff;        /* light mode */
   padding: 20px;
   border-radius: 10px;
   border: 1px solid #ddd;
@@ -73,7 +125,7 @@ body {
 }
 
 .dark .card {
-  background: #1a1a1a;
+  background: #1a1a1a;     /* dark mode */
   border-color: #333;
 }
 
@@ -88,7 +140,13 @@ body {
   text-decoration: underline;
 }
 
-/* MOBILE */
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* tablet */
+  }
+}
+
 @media (max-width: 900px) {
   .portfolio {
     flex-direction: column;
@@ -101,32 +159,6 @@ body {
   }
 
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* mobile */
   }
-  /* === CV ICON BUTTON STYLE === */
-.links a[title="Download CV"] {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  border: 1px solid transparent;
-}
-
-/* Hover animation like a button */
-.links a[title="Download CV"]:hover {
-  background: #000;
-  color: #fff;
-  transform: scale(1.1);
-  border: 1px solid #000;
-}
-
-/* Dark mode hover */
-.dark .links a[title="Download CV"]:hover {
-  background: #fff;
-  color: #000;
-  border: 1px solid #fff;
-}
-
 }
