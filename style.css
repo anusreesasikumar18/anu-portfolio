@@ -1,7 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f2f2f2;
+  background: #f5f5f5;
+  color: #111;
 }
 
 .portfolio {
@@ -14,15 +15,17 @@ body {
 /* LEFT PROFILE CARD */
 .profile-card {
   width: 35%;
-  background: linear-gradient(135deg, #ffd6e0, #ffe7cc);
+  background: #ffffff;
   padding: 30px;
   border-radius: 10px;
+  border: 1px solid #ddd;
 }
 
 .profile-card img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 20px;
+  filter: grayscale(100%);
 }
 
 .profile-card h1 {
@@ -37,11 +40,15 @@ body {
 .role {
   font-weight: bold;
   margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #444;
 }
 
 .about {
   line-height: 1.6;
   margin-bottom: 20px;
+  color: #333;
 }
 
 .links a {
@@ -49,6 +56,7 @@ body {
   text-decoration: none;
   color: #000;
   font-weight: bold;
+  border-bottom: 1px solid #000;
 }
 
 /* RIGHT GRID */
@@ -60,16 +68,19 @@ body {
 }
 
 .card {
-  background: #fff;
+  background: #ffffff;
   padding: 20px;
   border-radius: 10px;
+  border: 1px solid #ddd;
 }
 
 .card h2 {
   margin-top: 0;
   font-size: 18px;
+  text-transform: uppercase;
 }
 
 .card p {
   line-height: 1.5;
+  color: #333;
 }
